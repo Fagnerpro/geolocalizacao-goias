@@ -1,5 +1,7 @@
 # geolocalizacao_streamlit.py
 
+# geolocalizacao_streamlit.py
+
 import pandas as pd
 import streamlit as st
 from geopy.geocoders import Nominatim
@@ -55,7 +57,7 @@ if uploaded_file:
             icon=folium.Icon(color='blue', icon='info-sign')
         ).add_to(mapa)
 
-    st_folium(mapa, width=1200, height=600)
+    st_folium(mapa, width=1200, height=600, key="mapa")
 
     st.subheader("Download do arquivo geocodificado")
     df.to_csv("enderecos_geocodificados.csv", index=False)
